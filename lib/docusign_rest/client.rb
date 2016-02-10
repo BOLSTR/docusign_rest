@@ -1027,7 +1027,7 @@ module DocusignRest
     #
     # Returns the PDF document as a byte stream.
     def get_combined_document_from_envelope(options={})
-      certificate = options.fetch("certificate", false)
+      certificate = options.fetch(:certificate, false)
       content_type = { 'Content-Type' => 'application/json' }
       content_type.merge(options[:headers]) if options[:headers]
 
